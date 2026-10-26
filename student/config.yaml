@@ -1,0 +1,18 @@
+# Keyword arguments for each policy class in student/policy.py.
+# The grader evaluates MyPolicy (the default CPEN455_POLICY) with the
+# arguments under `policies:` below, at budgets 64, 128 and 256.
+policies:
+  StreamingLLM: {sink: 4}
+  H2O: {sink: 4, recent: 32, window: 8, interval: 8}
+  MyPolicy: {}
+
+# Settings of the StreamingLLM and H2O baseline rows in local runs.
+references:
+  StreamingLLM: {sink: 4}
+  H2O: {sink: 4, recent: 32, window: 8, interval: 8}
+
+# T1 ablation examples (run with CPEN455_POLICY=H2O and a copy of this file):
+#   TOVA as a special case of H2O:  H2O: {sink: 0, recent: 1, window: 1, interval: 1}
+#   eviction interval k:            H2O: {..., interval: 1 | 8 | 32}
+#   scoring window w:               H2O: {..., window: 1 | 8 | 32}
+#   attention sinks:                H2O: {..., sink: 0 | 1 | 4}

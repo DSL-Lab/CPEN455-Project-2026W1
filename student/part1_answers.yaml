@@ -1,0 +1,19 @@
+# Part 1: concept check. Numeric answers are autograded; give short derivations in the
+# `explanation` fields (graded by rubric). Use integers for byte counts, no units.
+
+q1_key_cache_shape:            # one layer's key cache, gpt2-medium, 300 tokens, batch 8
+  shape: [0, 0, 0, 0]          # TODO
+  dims: [TODO, TODO, TODO, TODO]
+
+q2_kv_memory:
+  bytes: 0                     # TODO: KV bytes for gpt2-medium, L = 1024, B = 64, fp16
+  break_even_budget: 0         # TODO: budget whose memory equals vanilla's ~12·B·T·d·2 bytes
+  explanation: >
+    TODO
+
+q3_why_not_queries: >
+  TODO
+
+q4_attention_flops: >
+  TODO
+

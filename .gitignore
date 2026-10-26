@@ -1,0 +1,32 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+.venv/
+venv/
+.vscode/
+.idea/
+
+# weights and run outputs
+checkpoints/*.pt
+checkpoints/*.safetensors
+*.bin
+runs/
+wandb/
+run*.json
+# (validation.json, student/part2_results.json and report.pdf are part of your submission: commit them)
+# Local experiment environments and large artifacts
+.cache/
+.python/
+outputs/
+wandb/
+data/math/
+data/lambada/
+report/*.aux
+report/*.log
+report/*.out
+report/report.pdf
+
+# optional public set, not used by the course (scripts/prepare_data.py --lambada)
+data/lambada_test.jsonl
